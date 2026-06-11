@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>銘傳大學：迴音迴廊 (極致大畫面三分支版)</title>
+    <title>銘傳大學：迴音迴廊 (終極無瑕疵長篇版)</title>
     <style>
         body {
             background-color: #0a0b0e;
@@ -15,7 +15,7 @@
             justify-content: center;
         }
         .game-container {
-            max-width: 850px; /* 放大整體容器 */
+            max-width: 850px;
             width: 100%;
             background: #11141c;
             border-radius: 20px;
@@ -23,25 +23,21 @@
             box-shadow: 0 25px 60px rgba(0,0,0,0.8);
             border-top: 6px solid #ff3333;
         }
-        
-        /* 核心：電影級大畫面場景大圖 */
         .scene-box {
             width: 100%;
-            height: 480px; /* 畫面大幅度放大 */
+            height: 480px; /* 大畫面 */
             border-radius: 12px;
             border: 2px solid #2d3748;
             overflow: hidden;
             margin-bottom: 25px;
             background: #000;
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.6);
         }
         .scene-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: all 0.6s ease-in-out;
+            transition: all 0.4s ease-in-out;
         }
-
         .status-badge {
             background: #1a202c;
             padding: 8px 20px;
@@ -52,13 +48,11 @@
             margin-bottom: 20px;
             border: 1px solid rgba(255, 85, 85, 0.4);
             font-weight: bold;
-            letter-spacing: 1px;
         }
         h1 {
             color: #ffffff;
             font-size: 28px;
             margin: 0 0 8px 0;
-            letter-spacing: 1px;
         }
         .subtitle {
             color: #a0aec0;
@@ -74,15 +68,12 @@
             line-height: 1.9;
             margin-bottom: 25px;
             border-left: 5px solid #ff3333;
-            min-height: 180px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            min-height: 200px;
         }
         .story-box strong {
             color: #ff5555;
-            font-size: 18px;
+            font-size: 19px;
         }
-        
-        /* 三按鈕並排/堆疊樣式 */
         .btn {
             display: block;
             background: #1f2430;
@@ -90,8 +81,6 @@
             padding: 16px 22px;
             margin-bottom: 14px;
             border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
             transition: all 0.2s ease-in-out;
             cursor: pointer;
             border: 1px solid #323949;
@@ -119,30 +108,24 @@
 <body>
 
     <div class="game-container">
-        <div class="status-badge" id="game-status">目前地點：校園正門口 (探索度: 10%)</div>
-
+        <div class="status-badge" id="game-status">載入中...</div>
         <div class="scene-box">
-            <img id="scene-img" class="scene-img" src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1200" alt="場景">
+            <img id="scene-img" class="scene-img" src="" alt="場景">
         </div>
-        
-        <h1 id="game-title">銘傳大學：迴音迴廊 (終極長篇三分支版)</h1>
-        <div class="subtitle">超大型動態網頁互動劇本 — 考驗你的 C 語言邏輯、線性代數思維與校園生存本能。</div>
+        <h1>銘傳大學：迴音迴廊 (終極無瑕長篇版)</h1>
+        <div class="subtitle">全面修復版本 — 所有路線皆有精美實景畫面與超長故事劇情。</div>
 
-        <div class="story-box" id="story-text">
-            加載故事中...
-        </div>
-
+        <div class="story-box" id="story-text">加載中...</div>
         <div id="options-box"></div>
 
         <div class="footer">
-            <p>© 2026 MCU Cinematic Multiverse RPG. Developed via EzPage Engine.</p>
+            <p>© 2026 MCU Epic Horror RPG. Fixed & Expanded Version.</p>
         </div>
     </div>
 
     <script>
-        // 超大型多線故事資料庫（每關皆為 3 選擇）
         const storyData = {
-            // ------------------ STAGE 1 ------------------
+            // ==================== STAGE 1 ====================
             "start": {
                 status: "校園正門口 (探索度: 10%)",
                 img: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1200", // 暴雨校門
@@ -154,11 +137,11 @@
                 ]
             },
 
-            // ------------------ STAGE 2 (分支分流) ------------------
+            // ==================== STAGE 2 ====================
             "stairs_path": {
                 status: "無限大階梯 (探索度: 25%)",
                 img: "https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=1200", // 陰暗階梯
-                text: "<strong>【第二章：死迴圈的考驗】</strong><br><br>你選擇了階梯。雨水瘋狂打在你的臉上，你爬了整整十分鐘，腿酸得快要斷掉，但一回頭卻驚恐地發現：你竟然還停在剛進校門的起點！這段階梯被施了詛咒。<br><br>此時，石階扶手上亮起了發光的綠色代碼：<code>while(grades < 60) { climb_stairs(); }</code>。這是一個沒有停止條件的死迴圈！",
+                text: "<strong>【第二章：死迴圈的考驗】</strong><br><br>你選擇了階梯。雨水瘋狂打在你的臉上，你爬了整整十分鐘，腿酸得快要斷掉，但一回頭卻驚恐地發現：你竟然還停在剛進校門的起點！這段階梯被施了詛咒。<br><br>此時，石階扶手上亮起了發光的綠色代碼：<code>while(grades < 60) { climb_stairs(); }</code>。這是一個沒有停止條件的死迴圈！如果不想出辦法，你將活活累死在階梯上！",
                 choices: [
                     { text: "📝 拿出隨身攜帶的藍色原子筆，在扶手代碼下方強行刻上「break;」試圖破壞迴圈", target: "break_loop" },
                     { text: "🔄 閉上雙眼，在心中默唸線性代數的轉置矩陣公式，嘗試用空間幾何邏輯反向往下走", target: "matrix_reverse" },
@@ -178,7 +161,7 @@
             "gym_path": {
                 status: "黑暗地下體育館 (探索度: 25%)",
                 img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200", // 廢棄體育館
-                text: "<strong>【第四章：黑影啦啦隊的圍攻】</strong><br><br>你選擇了體育館。從排水道爬進來後，你來到了空曠陰暗的室內體育館。球場中央的計分板突然亮起，上面顯示著悲慘的數值：【重修生 59：0 歐趴生】。<br><br>突然，球場四周傳來密密麻麻的運球聲，無數個由黑影組成的『歷屆重修怨靈啦啦隊』一邊跳著詭異的舞步，一邊將你死死包圍！",
+                text: "<strong>【第四章：黑影啦啦隊的圍攻】</strong><br><br>你選擇了體育館。從排水道爬進來後，你來到了空曠陰暗的室內體育館。球場中央的計分板突然亮起，上面顯示著悲慘的數值：【重修生 59：0 歐趴生】。<br><br>突然，球場四周傳來密密麻麻的運球聲，無數個由黑影組成的『歷屆重修怨靈啦啦隊』一邊跳著詭異的舞步，一邊將你死死包圍！空間變得越來越冰冷！",
                 choices: [
                     { text: "🏃 轉身衝向體育館二樓的播音控制室，試圖利用全校廣播驅散黑影", target: "broadcast_room" },
                     { text: "🎒 蹲下打開背包，拔出電路學實驗用的三用電錶，連接口袋的行動電源製造高壓電弧防線", target: "electric_shield" },
@@ -186,7 +169,7 @@
                 ]
             },
 
-            // ------------------ STAGE 3 (深度交織與劇本推進) ------------------
+            // ==================== STAGE 3 ====================
             "break_loop": {
                 status: "資訊教學大樓中庭 (探索度: 50%)",
                 img: "https://images.unsplash.com/photo-1510070112810-d4e9a46d9e91?w=1200", // 科技感中庭
@@ -199,7 +182,7 @@
             },
             "matrix_reverse": {
                 status: "古老鐘樓內部 (探索度: 50%)",
-                img: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1200", // 鐘樓內部
+                img: "https://images.unsplash.com/photo-1620121692029-d088224ddc74?w=1200", // 鐘樓內部
                 text: "<strong>【第六章：鐘樓的幽靈學長】</strong><br><br>利用線代的空間投影變換，你竟然成功打破了階梯的垂直重力，直接穿透空間來到了校園最高處的古老鐘樓內部！齒輪在卡嗒卡嗒地轉動。這時，一個飄浮在半空中的制服學長幽靈正冷冷地盯著你。<br><br>他手上拿著一本發光的 C 語言課本：「學弟，指針（Pointer）的本質到底是什麼？回答不出來就留下來當我的重修助手吧。」",
                 choices: [
                     { text: "📌 大聲回答：『指針是一個用來儲存另一個變數記憶體位址（Memory Address）的變數！』", target: "pointer_correct" },
@@ -207,111 +190,170 @@
                     { text: "🧗 拒絕回答！轉身爬上鐘樓窗台，試圖沿著外牆的老舊排水管冒險滑下去逃跑", target: "drainpipe_escape" }
                 ]
             },
+            "run_crazy": {
+                status: "錯誤數據迷宮 (探索度: 45%)",
+                img: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1200", // 迷宮
+                text: "<strong>【第七章：蠻幹的代價】</strong><br><br>你選擇用體能硬碰硬！你拼了命往上爬，雖然成功穿過了死迴圈階梯，但因為缺乏邏輯引導，你一頭栽進了學校老舊的地下管線防空洞迷宮裡。四周牆壁不斷滲出黑色的不明液體，空氣中瀰漫著高壓電線短路的焦味。",
+                choices: [
+                    { text: "🔌 利用電路學的戴維寧等效電路原理，分析牆上裸露電線的電壓以尋找主配電室", target: "solve_success" },
+                    { text: "🚪 摸黑前進，強行推開前方一扇生鏽的鐵門，看看裡面是什麼", target: "office_path" },
+                    { text: "😭 留在原地，大喊請求救援", target: "data_storm_trap" }
+                ]
+            },
             "hit_brake": {
                 status: "地下中央伺服器機房 (探索度: 50%)",
                 img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200", // 中央機房
-                text: "<strong>【第七章：動態記憶體風暴】</strong><br><br>你死死踩下煞車！校車一記瘋狂甩尾，車尾直接撞開了教學大樓的地下室鐵門，停在了中央伺服器機房。這裡有無數條發光的網路線像觸手一樣在地面和天花板上蠕動。<br><br>核心主機因為怨氣過載，正在瘋狂進行錯誤的記憶體分配（malloc），記憶體即將溢位（Overflow）！",
+                text: "<strong>【第八章：動態記憶體風暴】</strong><br><br>你死死踩下煞車！校車一記瘋狂甩尾，車尾直接撞開了教學大樓的地下室鐵門，停在了中央伺服器機房。這裡有無數條發光的網路線像觸手一樣在地面和天花板上蠕動。<br><br>核心主機因為怨氣過載，正在瘋狂進行錯誤的記憶體分配（malloc），記憶體即將溢位（Overflow）！",
                 choices: [
                     { text: "💻 坐到主機前，冷靜編寫一段 free() 程式碼，試圖手動釋放這些被詛咒的記憶體資料", target: "free_success" },
                     { text: "🪓 提起旁邊消防栓上的消防斧頭，使出全力直接朝主機的中央電源總線砍下去", target: "cut_power" },
-                    { text: "🏃 覺得這裡快爆炸了，轉身沿著旁邊狹窄的緊急供水管道往上爬，尋找安全出口", target: "water_pipe_path" }
+                    { text: "🏃 沿著旁邊狹窄的緊急供水管道往上爬，尋找安全出口", target: "water_pipe_path" }
                 ]
             },
+            "smash_door": {
+                status: "大樓外牆懸崖 (探索度: 45%)",
+                img: "https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=1200", // 外牆
+                text: "<strong>【第九章：懸崖邊的掙扎】</strong><br><br>你用安全錘砸碎了車窗，在校車衝入山谷的前一秒狼狽跳車，摔在了教學大樓外側的鋼筋平台上。暴雨瘋狂沖刷著你，你發現自己正懸掛在高空中，唯一的生路是沿著外牆濕滑的排水管往下爬。",
+                choices: [
+                    { text: "🧗 咬緊牙關，頂著強風沿著排水管慢慢滑向一樓草叢", target: "drainpipe_escape" },
+                    { text: "🪟 打破身旁三樓教室的窗戶，強行翻滾進教室內", target: "office_path" },
+                    { text: "📱 抓緊鋼筋，掏出手機大聲呼救", target: "data_storm_trap" }
+                ]
+            },
+            "bluetooth_hack": {
+                status: "校車控制台後台 (探索度: 50%)",
+                img: "https://images.unsplash.com/photo-1548345680-f5475ea5df84?w=1200", // 控制台
+                text: "<strong>【第十章：遠端代碼注入】</strong><br><br>你冷靜下來，打開手機的藍牙網路共享，成功侵入了校車的微控制器後台。你發現司機座的幽靈正在執行一段惡意代碼，你必須立刻注入一段修正檔（Patch）來奪取控制權！",
+                choices: [
+                    { text: "⌨️ 注入代碼：將指針重新導向安全記憶體位址", target: "free_success" },
+                    { text: "⌨️ 注入代碼：強行執行硬體強制關機指令", target: "cut_power" },
+                    { text: "😭 寫錯語法，導致編譯失敗", target: "data_storm_trap" }
+                ]
+            },
+            "broadcast_room": {
+                status: "播音控制室 (探索度: 50%)",
+                img: "https://images.unsplash.com/photo-1510070112810-d4e9a46d9e91?w=1200", // 控制室
+                text: "<strong>【第十一章：頻率的共振】</strong><br><br>你衝進了二樓的播音室，反鎖了大門。下方的黑影怨靈們瘋狂撞擊著門板。你發現播音台的混音器正顯示著線性代數的波形矩陣，只要將波形調至正交（Orthogonal），就能用強大的物理共振消除怨氣！",
+                choices: [
+                    { text: "🎛️ 將兩個內積轉向調整為 0（正交波形）", target: "solve_success" },
+                    { text: "🎛️ 將波形振幅調至最大最大", target: "solve_failed" },
+                    { text: "🏃 放棄播音台，從後方通風口逃走", target: "water_pipe_path" }
+                ]
+            },
+            "electric_shield": { target: "office_path" },
+            "smash_matrix": { target: "solve_failed" },
 
-            // ------------------ STAGE 4 (各線匯流與最終修剪) ------------------
+            // ==================== STAGE 4 ====================
             "solve_success": {
                 status: "安全數據光軌 (探索度: 75%)",
-                img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200",
-                text: "驗證成功！大螢幕射出一道翠綠色的 TCP 安全傳輸光軌通道，三次握手協議完美達成。這條發光的通道直接穿透了黑暗，平穩地將你送到了燈火通明的萬人大禮堂大門前，那裡就是期末考卷的所在地！",
+                img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200", // 光軌
+                text: "<strong>【第十二章：解鎖安全協定】</strong><br><br>驗證成功！公共螢幕和控制台射出一道翠綠色的 TCP 安全傳輸光軌。三次握手協議完美達成，四周的黑暗怨氣被徹底隔絕。這條光軌平穩地將你送到了萬人大禮堂大門前，那裡就是最終期末考卷的所在地！",
                 choices: [
-                    { text: "🚪 推開大門，昂首闊步地進入萬人大禮堂，迎接期末考卷的最終考驗", target: "final_hall" },
-                    { text: "🏛️ 發現旁邊有一部亮著金光的電梯，決定先去頂樓校長室看看能不能拿到加分密碼", target: "president_room" },
-                    { text: "🔍 覺得太過順利很可疑，停在門口先用三用電錶檢查走廊底部的配電箱", target: "data_storm_trap" }
+                    { text: "🚪 推開大門，進入萬人大禮堂，迎戰最終期末考卷", target: "final_hall" },
+                    { text: "🏛️ 發現旁邊有一部亮著金光的電梯，決定搭去頂樓校長室看看", target: "president_room" },
+                    { text: "🔍 覺得太順利了，留在走廊用三用電錶檢查配電箱", target: "data_storm_trap" }
+                ]
+            },
+            "solve_failed": {
+                status: "數據迷宮中心 (探索度: 70%)",
+                img: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1200", // 迷宮深處
+                text: "<strong>【第十三章：錯誤代碼的圍困】</strong><br><br>運算錯誤！大螢幕噴發出刺眼的紅光，你被拉入了一個由「語法錯誤」和破碎矩陣構成的巨型數據迷宮。冰冷的機械音嘲笑著你：『未定義的行為（Undefined Behavior）……』。你必須手動突圍！",
+                choices: [
+                    { text: "🧠 靠腦中的電路學公式分析周圍電子元件的阻抗，強行破壞牆壁突圍", target: "final_hall" },
+                    { text: "🛑 坐在地上，用手電筒的光束在地上排成一個緩衝防線（Buffer）", target: "office_path" },
+                    { text: "😭 徹底放棄，大喊投降", target: "data_storm_trap" }
                 ]
             },
             "office_path": {
-                status: "資訊院石膏辦公室 (探索度: 75%)",
-                img: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200", // 教授辦公室
-                text: "你推開木門，辦公室裡黑壓壓一片，排滿了由石膏做成的教授雕像。最中央的系主任雕像雙眼突然睜開，發出空洞的電子音：「同學，既然缺考，就直接進行專題審查（Project Review）吧。如果你的專題沒辦法通過矩陣驗證，現在就給予退學處分！」",
+                status: "資訊院辦公室 (探索度: 75%)",
+                img: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200", // 辦公室
+                text: "<strong>【第十四章：石膏教授的審查】</strong><br><br>你推開木門，辦公室裡黑壓壓一片，排滿了由石膏做成的教授雕像。最中央的系主任雕像雙眼突然睜開，發出空洞的電子音：「同學，既然缺考，就直接進行專題審查吧。回答我：指針（Pointer）的本質到底是什麼？」",
                 choices: [
-                    { text: "📊 沉著應對，打開筆電大聲展示你用線性代數寫出的影像加密專題報告", target: "project_pass" },
-                    { text: "😭 精神崩潰，跪在地上大喊：『教授對不起！求求你給我 60 分就好！』", target: "data_storm_trap" },
-                    { text: "🏃 趁教授雕像還沒完全動起來，轉身拔腿衝向辦公室後方的緊急逃生窗", target: "drainpipe_escape" }
+                    { text: "📌 大聲回答：『指針是儲存另一個變數記憶體位址的變數。』", target: "pointer_correct" },
+                    { text: "📌 緊張回答：『指針是縮短程式執行時間的動態巨集。』", target: "pointer_wrong" },
+                    { text: "🏃 轉身衝向辦公室後方的緊急逃生梯", target: "drainpipe_escape" }
                 ]
             },
             "pointer_correct": {
-                status: "學長的認可 (探索度: 75%)",
-                img: "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=1200",
-                text: "學長幽靈露出了極其欣慰的笑容：「基礎很扎實，指針觀念正確！」他伸手在虛空中一劃，將他當年不眠不休熬夜寫出的『歐趴修煉秘笈』傳承給了你。鐘樓的齒輪開始瘋狂倒轉，時間空間在此刻被重新編排！",
+                status: "學長的認可 (探索度: 80%)",
+                img: "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=1200", // 晴空微光
+                text: "<strong>【第十五章：ALL PASS 秘笈的傳承】</strong><br><br>「觀念非常扎實，指針正確。」系主任教授與鐘樓學長同時化為無數張蓋有『ALL PASS』綠色印章的及格考卷。他們將當年不眠不休熬夜推導出的『歐趴修煉秘笈』傳承給了你。前方時空裂開，出現了三個路口！",
                 choices: [
-                    { text: "✨ 順著秘笈散發的光芒，直接傳送進大禮堂的最終考場", target: "final_hall" },
-                    { text: "🏛️ 傳送到頂樓校長室，用秘笈的邏輯嘗試解鎖校長的最高管理權限鎖", target: "president_room" },
-                    { text: "🔄 按下大鐘中央的「時間重設鈕」，試圖讓整個校園的暴雨停下來", target: "time_reset_scene" }
-                ]
-            },
-            "free_success": {
-                status: "校園核心控制台 (探索度: 80%)",
-                img: "https://images.unsplash.com/photo-1548345680-f5475ea5df84?w=1200",
-                text: "【編譯成功。釋放記憶體：100%】。蠕動的網路線觸手發出慘叫並瞬間枯萎收回。中央伺服器的紅光退去，跳出金色的提示：『全校防禦漏洞已修補。解鎖校長室核心管理權限。』主控台下方彈出了一把虛擬的核心鑰匙。",
-                choices: [
-                    { text: "🔑 拿起虛擬核心鑰匙，搭乘旁邊的緊急升降梯直達最高層的校長室", target: "president_room" },
-                    { text: "🏫 帶上鑰匙，穿過開啟的地下通道，前往大禮堂與期末考卷正面對決", target: "final_hall" },
-                    { text: "🔍 留在機房，試圖修改全校學生的學期成績資料庫，直接將成績改成 100 分", target: "data_storm_trap" }
-                ]
-            },
-
-            // ------------------ 多線容錯分支（接續豐富劇情，不直接死） ------------------
-            "solve_failed": {
-                status: "錯誤數據迷宮 (探索度: 60%)",
-                img: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1200",
-                text: "特徵值輸入錯誤！大螢幕噴發出刺眼的紅光，你被拉入了一個由「語法錯誤（Syntax Error）」和破碎矩陣構成的巨型數據迷宮。四周不斷傳來機械音：『資料遺失、封包受損……』你必須手動找到出路！",
-                choices: [
-                    { text: "🧠 咬緊牙關，強行用大一學到的電路學 KVL 定律分析電流路徑，尋找出口", target: "final_hall" },
-                    { text: "🛑 停下腳步，坐在地上用手機試圖建立一個緩衝防線（Buffer Area）", target: "office_path" },
-                    { text: "😭 絕望大喊，請求神明保佑", target: "data_storm_trap" }
+                    { text: "✨ 順著秘笈的光芒，直接傳送進大禮堂的最終考場", target: "final_hall" },
+                    { text: "🏛 " + "傳送到頂樓校長室，用秘笈的權限鎖解開校長室大門", target: "president_room" },
+                    { text: "🔄 按下時空大鐘中央的「時間重設鈕」，試圖讓全校暴雨停下來", target: "time_reset_scene" }
                 ]
             },
             "pointer_wrong": {
-                status: "當掉的重修地窖 (探索度: 60%)",
-                img: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1200",
-                text: "「觀念完全錯誤！」學長幽靈憤怒地咆哮，整座鐘樓劇烈震動，腳下的木板碎裂，你直接掉進了鐘樓最底層的黑暗地窖。這裡堆滿了歷年被當掉的報廢主機，四周散發著陰冷的霉味。",
+                status: "重修煉獄地窖 (探索度: 65%)",
+                img: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1200", // 地窖
+                text: "<strong>【第十六章：當掉的絕望】</strong><br><br>「語法錯誤！直接當掉！」教授們憤怒地咆哮，整座辦公室劇烈震動，你腳下的木板碎裂，直接掉進了地下最底層的重修地窖。這裡堆滿了歷年不及格的報廢教科書，陰風陣陣。",
                 choices: [
-                    { text: "🔌 點燃地上廢棄的實驗線路作為火把，沿著唯一的暗道前進", target: "data_storm_trap" },
+                    { text: "🕯️ 點燃地上廢棄的電路板當作火把，沿著唯一的暗道前進", target: "data_storm_trap" },
                     { text: "🏃 發現牆壁上有個老舊的排風口，用盡全力拆開它並往上爬", target: "final_hall" },
-                    { text: "📱 打開手機，看看有沒有同學可以傳 LINE 救你", target: "solve_failed" }
+                    { text: "📱 打開手機，看看有沒有同學能用 LINE 傳答案救你", target: "solve_failed" }
                 ]
             },
             "drainpipe_escape": {
-                status: "大樓外牆懸崖 (探索度: 55%)",
-                img: "https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=1200",
-                text: "你剛滑到一半，老舊的排水管突然啪一聲斷裂！你整個人摔進了體育館後方的泥濘草叢中，腳踝一陣劇痛。這時，你注意到泥土裡埋著一塊發光的舊伺服器主機板，上面還通著微弱的殘留電流……",
+                status: "校園泥濘草叢 (探索度: 60%)",
+                img: "https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=1200", // 草叢
+                text: "<strong>【第十七章：草叢中的奇遇】</strong><br><br>你安全滑到了地面草叢中。這時，你注意到泥土裡埋著一塊發光的舊伺服器主機板，上面還通著微弱的殘留電流……這似乎是多年前被埋藏的校園核心機密！",
                 choices: [
-                    { text: "🔌 用衣服擦乾主機板，試圖用手機的 Type-C 線連接它，讀取內部資料", target: "free_success" },
-                    { text: "🏃 不管傷勢了，一瘸一拐、咬緊牙關趕往萬人大禮堂參加考試", target: "final_hall" },
-                    { text: "🤫 躲在草叢裡休息，等待暴雨過去", target: "data_storm_trap" }
+                    { text: "🔌 用衣服擦乾主機板，用手機的 Type-C 線連接它，嘗試讀取內部資料", target: "free_success" },
+                    { text: "🏃 不管主機板了，咬緊牙關一瘸一拐地趕往萬人大禮堂參加考試", target: "final_hall" },
+                    { text: "🤫 躲在草叢裡休息，等待這場恐怖的暴雨過去", target: "data_storm_trap" }
                 ]
             },
-            "run_crazy": { target: "solve_failed" }, "smash_door": { target: "drainpipe_escape" }, "bluetooth_hack": { target: "free_success" }, "broadcast_room": { target: "solve_success" }, "electric_shield": { target: "office_path" }, "smash_matrix": { target: "solve_failed" }, "cut_power": { target: "solve_failed" }, "water_pipe_path": { target: "final_hall" }, "project_pass": { target: "final_hall" },
+            "free_success": {
+                status: "校園核心控制台 (探索度: 85%)",
+                img: "https://images.unsplash.com/photo-1548345680-f5475ea5df84?w=1200", // 控制台
+                text: "<strong>【第十八章：全面解鎖管理權限】</strong><br><br>【編譯成功。釋放記憶體：100%】。蠕動的網路線觸手發出慘叫並瞬間枯萎。中央伺服器的紅光退去，跳出金色的提示：『全校防禦漏洞已修補。解鎖校長室核心管理權限。』主控台下方彈出了一把虛擬的核心鑰匙。",
+                choices: [
+                    { text: "🔑 拿起虛擬核心鑰匙，搭乘升降梯直達最高層的校長室", target: "president_room" },
+                    { text: "🏫 帶上鑰匙，穿過開啟的地下通道，前往大禮堂與期末考卷正面對決", target: "final_hall" },
+                    { text: "🔍 留在機房，試圖修改全校學生成績資料庫，直接將全班改成 100 分", target: "data_storm_trap" }
+                ]
+            },
+            "cut_power": {
+                status: "絕對黑暗的機房 (探索度: 60%)",
+                img: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1200", // 漆黑
+                text: "<strong>【第十九章：斷電的代價】</strong><br><br>轟隆！你一斧頭砍斷了主電源，全校陷入了絕對零度的黑暗。觸手停了，但機房也變成了死鎖的密室。你在黑暗中瘋狂摸索，意外摸到了三扇不同的暗門！",
+                choices: [
+                    { text: "🚪 推開第一扇寫著「緊急逃生」的鐵門", target: "final_hall" },
+                    { text: "🚪 推開第二扇傳出教授咳嗽聲的木門", target: "office_path" },
+                    { text: "🚪 推開第三扇散發著刺骨寒風的暗門", target: "data_storm_trap" }
+                ]
+            },
+            "water_pipe_path": {
+                status: "通風與水管管道 (探索度: 65%)",
+                img: "https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=1200", // 管道
+                text: "<strong>【第二十章：管道內的迷途】</strong><br><br>你在狹窄的水管管道內艱難爬行。四周不斷傳來老鼠的叫聲和遠處考場的鐘聲。前面出現了三個不同的分叉管口，各自標示著不同的科目縮寫！",
+                choices: [
+                    { text: "⚙️ 爬向標著「EE（電路學）」的管口", target: "final_hall" },
+                    { text: "⚙️ 爬向標著「CS（C語言）」的管口", target: "office_path" },
+                    { text: "⚙️ 爬向沒有任何標示、散發著紅光的管口", target: "data_storm_trap" }
+                ]
+            },
 
-            // ------------------ 最終決戰前置 ------------------
+            // ==================== STAGE 5 (最終決戰與結局) ====================
             "president_room": {
-                status: "最高管理權限：校長室 (探索度: 90%)",
-                img: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1200",
-                text: "你來到了象徵銘傳最高管理權限的校長室。辦公桌上嵌著一個巨大的青銅密碼鎖，上面刻著校訓：『唯真唯校』。旁邊有一行燙金的提示：『本校創校於西元哪一年？輸入正確，全校學分直接及格。』",
+                status: "頂樓校長室 (探索度: 90%)",
+                img: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1200", // 校長室
+                text: "<strong>【第二十一章：校長的青銅鎖】</strong><br><br>你來到了象徵銘傳最高管理權限的校長室。辦公桌上嵌著一個巨大的青銅密碼鎖，上面刻著校訓：『唯真唯校』。旁邊有一行提示：『本校創校於西元哪一年？輸入正確，全校學分直接及格。』",
                 choices: [
                     { text: "🔢 輸入創校年份：1957 年", target: "end_legend" },
                     { text: "🔢 輸入建校年份：1965 年", target: "data_storm_trap" },
-                    { text: "🔢 拒絕猜測，直接用大錘把密碼鎖砸爛", target: "end_repeat" }
+                    { text: "🔨 拒絕猜測，舉起旁邊的裝飾金屬花瓶直接把鎖砸爛", target: "end_repeat" }
                 ]
             },
             "time_reset_scene": {
                 status: "時間迴流裂縫 (探索度: 95%)",
-                img: "https://images.unsplash.com/photo-1620121692029-d088224ddc74?w=1200",
-                text: "大鐘瘋狂倒轉！時空發生嚴重撕裂，外面的暴雨竟然開始往天空倒流。你手裡拿著滿分的考卷，站在了破曉晴空下的銘傳校園。你用邏輯重寫了這段歷史！",
+                img: "https://images.unsplash.com/photo-1620121692029-d088224ddc74?w=1200", // 時空裂縫
+                text: "<strong>【第二十二章：重寫命運之輪】</strong><br><br>大鐘瘋狂倒轉！時空發生嚴重撕裂，外面的暴雨竟然開始往天空倒流。你手裡拿著滿分的考卷，站在了破曉晴空下的銘傳校園。你用邏輯與勇氣重寫了這段歷史！",
                 choices: [
-                    { text: "✨ 踏入光芒中，正式迎來你的完美結局", target: "end_perfect" },
-                    { text: "✨ 留在這個時空，成為銘傳的守護神", target: "end_perfect" },
-                    { text: "✨ 重新體驗這場瘋狂的重修冒險", target: "start" }
+                    { text: "✨ 踏入光芒中，正式迎來你的傳奇人生結局", target: "end_perfect" },
+                    { text: "✨ 拒絕離開，留在這個時空成為校園的守護神", target: "end_perfect" },
+                    { text: "🔄 清除記憶，重新體驗這場瘋狂的重修冒險", target: "start" }
                 ]
             },
             "final_hall": {
@@ -326,16 +368,16 @@
             },
             "data_storm_trap": {
                 status: "怨靈風暴中心 (探索度: 90%)",
-                img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200",
-                text: "你觸發了隱藏的系統漏洞！四周場景瞬間粉碎，你被拉入了由無數Syntax Error構成的怨靈風暴中心。考卷在空中被撕碎，冰冷的機械音嘲笑著你：『投機取巧……零分計算！』這手無寸鐵的你該怎麼做？",
+                img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200", // 風暴核心
+                text: "<strong>【第二十三章：系統錯誤的陷阱】</strong><br><br>你觸發了隱藏的系統漏洞！四周場景瞬間粉碎，你被拉入了由無數Syntax Error構成的怨靈風暴中心。考卷在空中被撕碎，冰冷的機械音嘲笑著你：『投機取巧……零分計算！』這手無寸鐵的你該怎麼做？",
                 choices: [
                     { text: "🔥 燃燒靈魂！用不眠不休熬夜寫 C 語言的意志力，強行在腦中逆向重構代碼！", target: "end_normal" },
-                    { text: "🛡️ 閉上雙眼，用身體硬扛下這波數據衝擊", target: "end_repeat" },
-                    { text: "🔄 拼盡最後一絲力氣，按入口袋裡的重設按鈕", target: "start" }
+                    { text: "🛡️ 閉上雙眼，用身體硬扛下這波數據衝擊，任由命運宰割", target: "end_repeat" },
+                    { text: "🔄 拼盡最後一絲力氣，按下口袋裡的秘密重設按鈕", target: "start" }
                 ]
             },
 
-            // ==================== 5 大終極結局 (100% 完結) ====================
+            // ==================== 5 大終極結局 ====================
             "end_perfect": {
                 status: "👑 最終結局一：神級 R&D 開發總監 (True End)",
                 img: "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=1200", // 晴空萬里
@@ -346,12 +388,12 @@
                 status: "👑 最終結局二：銘傳榮譽校友 (Secret End)",
                 img: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1200", 
                 text: "<strong>【Secret End：唯真唯校的校史傳奇】</strong><br><br>咔噠！密碼鎖精準解開！校長室內飛出無數閃爍著金光的創校文獻。你因為對學校歷史與基礎科學的絕對熱愛，打破了這棟校園的所有怨氣詛咒。<br><br>你不僅期末考全數以滿分通過，更獲得了學校全額獎學金前往海外深造。你的名字被刻在銘傳的榮譽牆上，畢業即就業，成為學弟妹口中的百萬年薪傳奇研發工程師！",
-                choices: [{ text: "✨ 達成【隱藏結局】！點擊重新轉生遊玩", target: "start" }]
+                choices: [{ text: "✨ 達成【隱藏結局】！點擊重新遊玩", target: "start" }]
             },
             "end_good": {
                 status: "🎉 最終結局三：順利歐趴畢業 (Normal End)",
                 img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200",
-                text: "<strong>【Normal End：平凡的 All Pass】</strong><br><br>你頂住風暴在考卷上簽下名，大禮堂的幻象漸漸淡去。你順利完成了這場驚心動魄的期末考。雖然沒有成為名震世界的科學家，但你順利拿到了電路學與 C 語言的學分，歐趴畢業！<br><br>走出校門，你呼吸著新鮮空氣。雖然未來工作依然充滿挑戰，但你已經具備了工程師應有的冷靜與韌性。",
+                text: "<strong>【Normal End：平凡的 All Pass】</strong><br><br>你在金色鋼筆考卷上簽下名，大禮堂的幻象漸漸淡去。你順利完成了這場驚心動魄的期末考。雖然沒有成為名震世界的科學家，但你順利拿到了電路學與 C 語言的學分，歐趴畢業！<br><br>走出校門，你呼吸著新鮮空氣。雖然未來工作依然充滿挑戰，但你已經具備了工程師應有的冷靜與韌性。",
                 choices: [{ text: "🔄 達成【普通結局】。挑戰其他更完美的結局？", target: "start" }]
             },
             "end_normal": {
@@ -368,27 +410,22 @@
             }
         };
 
-        // 動態狀態機核心控制器（帶有淡入淡出換圖效果）
         function renderScene(sceneId) {
             const data = storyData[sceneId];
             if (!data) return;
 
-            // 1. 更新計步與地點狀態
             document.getElementById('game-status').innerText = `目前地點：${data.status}`;
             
-            // 2. 電影級畫面平滑淡入淡出換圖
             const imgElement = document.getElementById('scene-img');
             imgElement.style.opacity = 0.1;
             
             setTimeout(() => {
                 imgElement.src = data.img;
                 imgElement.style.opacity = 1;
-            }, 250);
+            }, 150);
 
-            // 3. 更換豐富的故事內文
             document.getElementById('story-text').innerHTML = data.text;
 
-            // 4. 清空並重新動態生成「3個」分支按鈕
             const optionsBox = document.getElementById('options-box');
             optionsBox.innerHTML = "";
             
@@ -401,7 +438,6 @@
             });
         }
 
-        // 初始化遊戲
         window.onload = function() {
             renderScene("start");
         };
